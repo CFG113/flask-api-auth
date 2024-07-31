@@ -1,0 +1,19 @@
+### Register a new user
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "testuser@example.com",
+    "password": "password123",
+    "confirm": "password123"
+}
+
+### Login with the registered user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "password123"
+}
