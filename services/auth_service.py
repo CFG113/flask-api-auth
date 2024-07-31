@@ -25,7 +25,7 @@ class UserService:
             raise InternalServerError(f"Database error creating user '{form.username.data}': {str(e)}")
 
     @staticmethod
-    def verify_user(username: str, password: str) -> User:
+    def login_user(username: str, password: str) -> User:
         try:
             user = UserRepository.get_user_by_username(username)
             if not user:
